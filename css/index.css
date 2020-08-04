@@ -1,0 +1,114 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+
+
+h1 {
+    color: black;
+    font-size: 60px;
+    margin: 0;
+    font-weight: normal;
+}
+
+h2 {
+    color: black;
+    font-size: 70px;
+    margin: 0;
+    line-height: 1;
+    font-weight: normal;
+}
+
+p {
+    color: black;
+    line-height: 200%;
+}
+
+a, a:visited {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.scrollblock {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.scrollblock .conteined {
+    padding: 0px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.not-lower {
+    text-transform: none;
+}
+
+.block-title { background-color: white; color: black; /* padding-bottom: 50px; */}
+.block-title a {color: rgb(27, 27, 27)}
+
+.block-testgame    { background-color: #978897; }
+.block-testgame h2 { color: #585760; }
+.block-testgame p  { color: #4F4E56; }
+.block-testgame a  { color: #AEDCC0; }
+
+.block-todo { background-color: #90EE90; }
+.block-todo h2 { color: #2A572A; }
+.block-todo .todo {
+    color: #121A12;
+    line-height: 100%;
+    font-family: monospace;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.block-about    { background-color: #44001A; }
+.block-about h2 { color: #50303B; }
+.block-about p  { color: #542742; }
+.block-about a  { color: #AEDCC0; }
+
+
+
+/* ============================================== */
+/* ==================== Menu ==================== */
+/* ============================================== */
+
+#menu-buttom {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    background-color: snow;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: solid 2px hsl(288, 100%, 92%);
+    cursor: pointer;
+}
+
+#menu-buttom .bar {
+    margin-left: 15%;
+    width: 70%;
+    background-color: hsl(288, 10%, 64%);
+    border-radius: 50px;
+}
+
+#menu-buttom #top-bar { margin-top: 30%; height: 8.33%; }
+
+#menu-buttom #bottom-bar { margin-top: 23%; height: 8.33%; }

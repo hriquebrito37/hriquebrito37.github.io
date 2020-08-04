@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+        <h1>Olá!</h1>
+        <p>
+            Bem-vindo à página do meu perfil do GitHub. <span class="not-lower">:D</span><br/>
+            Esse é o lugar onde eu vou hospedar meus web games e alguns outros projetos.
+        </p>
+        <p>
+            Essa é a minha conta do twitter: <a href="https://twitter.com/henrybrito37">@henrybrito37</a><br/>
+            Me segue lá se você quiser. ;)
+        </p>
+    </div>
+
+    <div class="scrollblock block-testgame">
+        <h2>Test Game</h2>
+        <p>
+            Esse é jogo de test que eu tô fazendo com JavaScript puro.<br/>
+            Você pode testar ele clicando em Start.
+        </p>
+        <a href="/game/index.html">START</a>
+    </div>
+
+    <div class="scrollblock block-about">
+        <h2>Sobre</h2>
+        <p>Uh... sobre mim?</p>
+        <p>
+            Hmm... O que eu posso dizer...?<br/>
+            Tenho 14 anos, moro no Brasil e sei programar em Python e JavaScript.<br/>
+            ...e eu também gosto de fazer jogos na Godot e na Unity.
+        </p>
+    </div>
+    <div id="menu-buttom" onclick="showMenu()">
+        <div id="top-bar" class="bar"></div>
+        <div id="bottom-bar" class="bar"></div>
+    </div>
+
+    <script>
+        function showMenu() {
+            alert("Show menu")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Page</title>
+    <link rel="stylesheet" href="/css/content.css">
+</head>
+<body>
+    <div class="scrollblock block-title">
+    <div class="conteined">
+        <h1>Hello!</h1>
+        <p>
+            Welcome to my github profile page. <span class="not-lower">:D</span><br/>
+            This is the place where i will host my web games and some other projects.
+        </p>
+        <p>
+            This is my twitter acount, btw: <a href="https://twitter.com/henrybrito37">@henrybrito37</a><br/>
+            Follow me there if you want to. ;)
+        </p>
+        <a href="/pt-br/" style="font-size: 10px;">Pt-Br version</a>
+    </div>
+    </div>
+
+    <div class="scrollblock block-testgame">
+    <div class="conteined">
+        <h2>Test Game</h2>
+        <p>
+            This is a simple test game i'm making with just vanilla JavaScript.<br/>
+            You can test it clicking on start.
+        </p>
+        <a onclick="alert('Sorry, but the game isn\'t ready yet...')">START</a>
+    </div>
+    </div>
+
+    <div class="scrollblock block-about">
+    <div class="conteined">
+        <h2>About</h2>
+        <p>Uh... about me?</p>
+        <p>
+            Hmm... What can i say...?<br/>
+            I'm 14 yo, i live in Brazil and i know how to program in Python and JavaScript.<br/>
+            ...I also like to make games with Godot and Unity too.
+        </p>
+    </div>
+    </div>
+
+    <script src="./js/scroll.js"></script>
+    <script>
+        window.document.querySelectorAll("a").forEach((a) => {a.target = "_PARENT"});
+    </script>
+</body>
+</html>

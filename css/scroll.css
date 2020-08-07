@@ -1,0 +1,19 @@
+.conteiner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.5s 0.5s;
+}
+
+.conteiner .scrollblock {
+    padding: 0px;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: left 1s;
+}

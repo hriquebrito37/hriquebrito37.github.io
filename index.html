@@ -31,7 +31,10 @@
             });
         }
 
-        if(detectMobile() == true) document.querySelector("#content").src += "?m";
+        if(detectMobile() == true) {
+            document.querySelector("#content").src += '?m';
+            document.querySelector("#content").scrolling = 'yes';
+        }
     </script>
     <script src="./js/menu.js"></script>
 </body>

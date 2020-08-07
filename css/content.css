@@ -1,6 +1,6 @@
 body {
     background-color: white;
-    color: white;
+    color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     text-align: center;
@@ -37,26 +37,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.conteiner {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
-    transition: background-color 0.5s 0.5s;
-}
-
-.conteiner .scrollblock {
-    padding: 0px;
-    position: absolute;
-    width: 100%;
-    left: 100%;
-    top: 50%;
-    transform: translate(0, -50%);
-    transition: left 1s;
-}
-
 .not-lower {
     text-transform: none;
 }
@@ -68,18 +48,6 @@ a:hover {
 .block-testgame h2 { color: #585760; }
 .block-testgame p  { color: #4F4E56; }
 .block-testgame a  { color: #AEDCC0; }
-
-.block-todo { background-color: #90EE90; }
-.block-todo h2 { color: #2A572A; }
-.block-todo .todo {
-    color: #121A12;
-    line-height: 100%;
-    font-family: monospace;
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 30%;
-    padding-right: 30%;
-}
 
 .block-about    { background-color: #44001A; }
 .block-about h2 { color: #50303B; }

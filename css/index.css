@@ -26,11 +26,9 @@ body {
     position: absolute;
     left: 30px;
     top: 30px;
-    background-color: snow;
     width: 60px;
     height: 60px;
     border-radius: 10px;
-    border: solid 2px hsl(288, 100%, 92%);
     cursor: pointer;
 }
 

@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/css/content.css">
 </head>
 <body>
+    <div class="conteiner">
     <div class="scrollblock block-title">
-    <div class="conteined">
         <h1>Hello!</h1>
         <p>
             Welcome to my github profile page. <span class="not-lower">:D</span><br/>
@@ -20,10 +20,8 @@
         </p>
         <a href="/pt-br/" style="font-size: 10px;">Pt-Br version</a>
     </div>
-    </div>
 
     <div class="scrollblock block-testgame">
-    <div class="conteined">
         <h2>Test Game</h2>
         <p>
             This is a simple test game i'm making with just vanilla JavaScript.<br/>
@@ -31,10 +29,8 @@
         </p>
         <a onclick="alert('Sorry, but the game isn\'t ready yet...')">START</a>
     </div>
-    </div>
 
     <div class="scrollblock block-about">
-    <div class="conteined">
         <h2>About</h2>
         <p>Uh... about me?</p>
         <p>
@@ -45,9 +41,10 @@
     </div>
     </div>
 
-    <script src="./js/scroll.js"></script>
     <script>
         window.document.querySelectorAll("a").forEach((a) => {a.target = "_PARENT"});
+        if(document.URL.split("?")[1] === "m") console.log("mobile") // TODO adapt site for mobile
     </script>
+    <script src="./js/scroll.js"></script>
 </body>
 </html>

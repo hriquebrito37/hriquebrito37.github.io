@@ -37,18 +37,17 @@ a:hover {
     text-decoration: underline;
 }
 
-.scrollblock {
+.conteiner {
     position: absolute;
     top: 0px;
     left: 0px;
     bottom: 0px;
-    /* height: 100%; */
     width: 100%;
     text-align: center;
-    /* visibility: hidden; */
+    transition: background-color 0.5s 0.5s;
 }
 
-.scrollblock .conteined {
+.conteiner .scrollblock {
     padding: 0px;
     position: absolute;
     width: 100%;

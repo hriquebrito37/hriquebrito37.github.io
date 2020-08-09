@@ -1,40 +1,40 @@
 document.addEventListener("wheel", detectScroll);
 
-let divs = document.querySelectorAll(".scrollblock");
+let sections = document.querySelectorAll(".scrollblock");
 
-let backgrounds = []
+let backgrounds = [];
 
-for (let i = 0; i < divs.length; i++) {
-    backgrounds.push(window.getComputedStyle(divs[i]).getPropertyValue("background-color"));
-    divs[i].style.backgroundColor = "rgba(0,0,0,0)";
-}
+sections.forEach((section) => {
+    backgrounds.push(window.getComputedStyle(section).getPropertyValue("background-color"));
+    section.style.backgroundColor = "rgba(0,0,0,0)";
+});
 
 let canScroll = true;
 
-let currentDiv = 0;
-changeDiv(currentDiv);
+let currentSection = 0;
+changeSection(currentSection);
 
 const clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));
 
 function detectScroll(ev) {
     if (canScroll == true) {
-        if(ev.deltaY > 0) { currentDiv++; }
-        else if(ev.deltaY < 0) { currentDiv--; }
+        if(ev.deltaY > 0) { currentSection++; }
+        else if(ev.deltaY < 0) { currentSection--; }
         canScroll = false;
 
-        currentDiv = clampNumber(currentDiv, 0, divs.length - 1);
+        currentSection = clampNumber(currentSection, 0, sections.length - 1);
         
-        changeDiv(currentDiv);
+        changeSection(currentSection);
         setTimeout(function() { canScroll = true; }, 1500);
     }
 }
 
 
-function changeDiv(divIndex) {
-    divs[divIndex].parentElement.style.backgroundColor = backgrounds[divIndex];
+function changeSection(sectionIndex) {
+    sections[sectionIndex].parentElement.style.backgroundColor = backgrounds[sectionIndex];
 
-    if(divs[divIndex - 1] != undefined) divs[divIndex - 1].style.left = '-100%';
-    if(divs[divIndex + 1] != undefined) divs[divIndex + 1].style.left = '100%';
+    if(sections[sectionIndex - 1] != undefined) sections[sectionIndex - 1].style.left = '-100%';
+    if(sections[sectionIndex + 1] != undefined) sections[sectionIndex + 1].style.left = '100%';
 
-    setTimeout(function() { divs[divIndex].style.left = '0%'; }, 1000);
+    setTimeout(function() { sections[sectionIndex].style.left = '0%'; }, 1000);
 }

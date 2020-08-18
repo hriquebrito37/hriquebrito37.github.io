@@ -14,7 +14,8 @@ if(document.URL.split("?")[1] === 'm') {
     document.head.appendChild(cssStyle);
 
     let scrollScript = document.createElement('script');
-    scrollScript.className = "scroll";
+    scrollScript.className = 'scroll';
     scrollScript.src = '/js/scroll.js';
     document.body.appendChild(scrollScript);
 }
+

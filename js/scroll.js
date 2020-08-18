@@ -1,4 +1,5 @@
-document.addEventListener("wheel", detectScroll);
+document.addEventListener("wheel", scrollHandler);
+document.addEventListener("keydown", keyboardHandler);
 
 let sections = document.querySelectorAll(".scrollblock");
 
@@ -16,16 +17,31 @@ changeSection(currentSection);
 
 const clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));
 
-function detectScroll(ev) {
+function changeSectionByNumber(num) {
     if (canScroll == true) {
-        if(ev.deltaY > 0) { currentSection++; }
-        else if(ev.deltaY < 0) { currentSection--; }
+        currentSection += num;
         canScroll = false;
 
         currentSection = clampNumber(currentSection, 0, sections.length - 1);
-        
+
         changeSection(currentSection);
         setTimeout(function() { canScroll = true; }, 1500);
+    }
+}
+
+function scrollHandler(ev) {
+    if(ev.deltaY > 0) { changeSectionByNumber(1); }
+    else if(ev.deltaY < 0) { changeSectionByNumber(-1); }
+}
+
+function keyboardHandler(ev) {
+    switch (ev.key) {
+        case "ArrowUp":
+        case "ArrowLeft":
+            changeSectionByNumber(-1); break;
+        case "ArrowDown":
+        case "ArrowRight":
+            changeSectionByNumber(1); break;
     }
 }
 
@@ -38,3 +54,4 @@ function changeSection(sectionIndex) {
 
     setTimeout(function() { sections[sectionIndex].style.left = '0%'; }, 1000);
 }
+

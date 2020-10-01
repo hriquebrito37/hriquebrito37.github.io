@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 .conteiner { visibility: visible; }
+=======
+.container { visibility: visible; }
+>>>>>>> Stashed changes
 
 .scrollblock {
     position: relative;

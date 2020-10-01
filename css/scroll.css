@@ -1,5 +1,6 @@
-.conteiner {
+.container {
     position: absolute;
+    overflow: hidden;
     top: 0px;
     left: 0px;
     bottom: 0px;
@@ -9,7 +10,7 @@
     visibility: visible;
 }
 
-.conteiner .scrollblock {
+.container .scrollblock {
     padding: 0px;
     position: absolute;
     width: 100%;
@@ -18,3 +19,4 @@
     transform: translate(0, -50%);
     transition: left 1s;
 }
+

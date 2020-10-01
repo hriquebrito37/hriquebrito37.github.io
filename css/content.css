@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .conteiner { visibility: hidden; }
 
 body {
@@ -9,6 +10,9 @@ body {
     text-transform: lowercase;
     margin: 0;
 }
+=======
+.container { visibility: visible; }
+>>>>>>> Stashed changes
 
 h1 {
     color: black;
